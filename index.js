@@ -5,7 +5,7 @@ const { testConnection } = require('./db');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const corsOptions = { origin: process.env.FRONTEND_URL || 'http://localhost:3000' };
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 const userRoutes = require('./routes/userRoutes');
 
